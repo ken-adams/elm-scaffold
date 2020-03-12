@@ -12,6 +12,10 @@ module.exports = {
         filename: "[name].js"
     },
 
+    optimization: {
+        minimize: true
+    },
+
     module: {
         rules: [
             {
@@ -45,7 +49,7 @@ module.exports = {
         noParse: /\.elm$/
     },
 
-    plugins: [new CleanWebpackPlugin(["dist"]), new webpack.optimize.UglifyJsPlugin({ mangle: false })],
+    // plugins: [new CleanWebpackPlugin(["dist"]), new webpack.optimize.UglifyJsPlugin({ mangle: false })],
 
     devServer: {
         inline: true,
